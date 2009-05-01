@@ -1,0 +1,13 @@
+<plugin name='multi-tenant-acegi' version='0.1' grailsVersion='1.1 &gt; *'>
+  <author>Eric Martineau</author>
+  <title>Integrates the multi-tenant plugin with acegi, so the current tenant can be determined from the authenticated principal</title>
+  <description>\
+Provides a custom CurrentTenant implementation that uses the security context to identify the current tenant.  This allows all users to login from 
+one url instead of having to remember a special url to log in to
+</description>
+  <documentation>http://grails.org/MultiTenantAcegi+Plugin</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+  </resources>
+  <dependencies />
+</plugin>
