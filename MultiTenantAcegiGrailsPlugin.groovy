@@ -3,11 +3,11 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class MultiTenantAcegiGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.2"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.1 > *"
     // the other plugins this plugin depends on
-    //def dependsOn = [acegi:"0.5.1", multiTenant:"0.6"]
+    //def dependsOn = [acegi:"0.5.1", multiTenant:"0.7"]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp"
@@ -16,8 +16,10 @@ class MultiTenantAcegiGrailsPlugin {
     // TODO Fill in these fields
     def author = "Eric Martineau"
     def authorEmail = ""
-    def title = "Integrates the multi-tenant plugin with acegi, so the current tenant can be determined from the authenticated principal"
+    def title = "Multi-Tenant Acegi Integration"
     def description = '''\\
+Integrates the multi-tenant plugin with acegi, so the current tenant can be determined from the authenticated principal.
+
 Provides a custom CurrentTenant implementation that uses the security context to identify the current tenant.  This allows all users to login from 
 one url instead of having to remember a special url to log in to
 '''
