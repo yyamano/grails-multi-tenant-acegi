@@ -3,11 +3,11 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class MultiTenantAcegiGrailsPlugin {
     // the plugin version
-    def version = "0.2"
+    def version = "0.4"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.1 > *"
     // the other plugins this plugin depends on
-    //def dependsOn = [acegi:"0.5.1", multiTenant:"0.7"]
+    //def dependsOn = [acegi:"0.5.1", multiTenant:"0.10"]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp"
@@ -29,7 +29,9 @@ one url instead of having to remember a special url to log in to
 
     def doWithSpring = {
       if (ConfigurationHolder.config.tenant.resolver.type == "acegi") {
-        currentTenant(AcegiCurrentTenant)
+        currentTenant(AcegiCurrentTenant) {
+          eventBroker = ref("eventBroker")
+        }
       }
     }
 
