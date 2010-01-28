@@ -1,4 +1,4 @@
-<plugin name='multi-tenant-acegi' version='0.4' grailsVersion='1.1 &gt; *'>
+<plugin name='multi-tenant-acegi' version='0.5' grailsVersion='1.2 &gt; *'>
   <author>Eric Martineau</author>
   <title>Multi-Tenant Acegi Integration</title>
   <description>\
@@ -9,5 +9,10 @@ one url instead of having to remember a special url to log in to
 </description>
   <documentation>http://grails.org/MultiTenantAcegi+Plugin</documentation>
   <resources />
-  <dependencies />
+  <dependencies>
+    <resolvers>
+      <resolver type='grailsPlugins' name='grailsPlugins' />
+    </resolvers>
+  </dependencies>
+  <behavior />
 </plugin>
