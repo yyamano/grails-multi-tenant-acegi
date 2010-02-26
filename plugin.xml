@@ -1,4 +1,4 @@
-<plugin name='multi-tenant-acegi' version='0.5' grailsVersion='1.2 &gt; *'>
+<plugin name='multi-tenant-acegi' version='0.5' grailsVersion='1.2.1 &gt; *'>
   <author>Eric Martineau</author>
   <title>Multi-Tenant Acegi Integration</title>
   <description>\
@@ -8,7 +8,9 @@ Provides a custom CurrentTenant implementation that uses the security context to
 one url instead of having to remember a special url to log in to
 </description>
   <documentation>http://grails.org/MultiTenantAcegi+Plugin</documentation>
-  <resources />
+  <resources>
+    <resource>UrlMappings</resource>
+  </resources>
   <dependencies>
     <resolvers>
       <resolver type='grailsPlugins' name='grailsPlugins' />
